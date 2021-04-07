@@ -54,43 +54,43 @@ inquirer
         const fileName = `${response.title.toLowerCase().split(' ').join('')}.md`;    
 
         const newReadme = `
-        # ${response.title}
-        
-        ## Description
-        
-        ${response.description}
+# ${response.title}
 
-        ## Table of Contents 
-        * [Installation](#installation)
-        * [Usage](#usage)
-        * [License](#license)
-        * [Contributing](#contributing)
-        * [Tests](#tests)
-        * [Questions](#questions)
-        
-        ## Installation
+## Description
 
-        ${response.install}
+${response.description}
 
-        ## Usage
+## Table of Contents 
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Questions](#questions)
 
-        ${response.usage}
+## Installation
 
-        ## License
+${response.install}
 
-        ## Contributing
+## Usage
 
-        ${response.contributing}
+${response.usage}
 
-        ## Tests
+## License
 
-        ${response.test}
+## Contributing
 
-        ## Questions
+${response.contributing}
 
-        Please contact me at ${response.email} if you have any questions.
+## Tests
 
-        [My GitHub profile can be found here.](https://github.com/${response.username})
+${response.test}
+
+## Questions
+
+Please contact me at ${response.email} if you have any questions.
+
+[My GitHub profile can be found here.](https://github.com/${response.username})
         `;
         
         fs.writeFile(fileName, newReadme, (err) =>
