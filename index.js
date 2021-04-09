@@ -30,13 +30,20 @@ inquirer
         },
         {
             type: 'input',
-            message: 'Contributions?????',
+            message: 'How should other users contribute?',
             name: 'contributing',
         },
         {
             type: 'input',
-            message: 'Tests??????',
+            message: 'How do you test the project?',
             name: 'test',
+        },
+        {
+            // how to phrase this?
+            type: 'list',
+            message: 'What licenses apply to the project?',
+            name: 'license',
+            choices: ["MIT", "BSD", "GPL"],
         },
         {
             type: 'input',
@@ -51,12 +58,18 @@ inquirer
     ])
 
     .then((response) => {
-        const fileName = `${response.title.toLowerCase().split(' ').join('')}.md`;    
+        const fileName = `${response.title.toLowerCase().split(' ').join('')}.md`;   
+        
+        // create badge for license here
+        const badgeUrl = 'https://img.shields.io/badge/license-MIT-green'
+        console.log(badgeUrl);
 
         const newReadme = `
 # ${response.title}
 
 ## Description
+
+![license](badgeUrl)
 
 ${response.description}
 
@@ -75,8 +88,6 @@ ${response.install}
 ## Usage
 
 ${response.usage}
-
-## License
 
 ## Contributing
 
