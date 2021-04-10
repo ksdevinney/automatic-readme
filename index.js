@@ -61,15 +61,14 @@ inquirer
         const fileName = `${response.title.toLowerCase().split(' ').join('')}.md`;   
         
         // create badge for license here
-        const badgeUrl = 'https://img.shields.io/badge/license-`${response.license}`-green'
-        console.log(badgeUrl);
+        const baseUrl = 'https://img.shields.io/badge/license-'
 
         const newReadme = `
 # ${response.title}
 
 ## Description
 
-![license](${badgeUrl})
+![license](https://img.shields.io/badge/license-${response.license}-green)
 
 ${response.description}
 
