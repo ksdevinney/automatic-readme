@@ -68,7 +68,7 @@ inquirer
 
 ## Description
 
-![license]('https://img.shields.io/badge/license-' + ${response.license} + '-green')
+![license](https://img.shields.io/badge/license-${response.license}-green)
 
 ${response.description}
 
