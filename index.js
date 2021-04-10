@@ -89,6 +89,10 @@ ${response.install}
 
 ${response.usage}
 
+## License
+
+This application is covered under the ${response.license} license.
+
 ## Contributing
 
 ${response.contributing}
